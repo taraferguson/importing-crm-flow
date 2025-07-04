@@ -32,7 +32,7 @@ export const importOptions: ImportType[] = [
   },
   {
     id: 'sessions',
-    name: 'Speaking Sessions',
+    name: 'Sessions and Webinars',
     description: 'Track every session to understand speaker performance and topics',
     icon: '💼',
     template: {

@@ -18,7 +18,7 @@ import { importOptions, ImportType } from '../../../config/import-types.config';
         <div class="relationship-flow">
           <span class="flow-item">📅 Past Events</span>
           <span class="flow-arrow">→</span>
-          <span class="flow-item">💼 Speaking Sessions</span>
+                          <span class="flow-item">💼 Sessions and Webinars</span>
           <span class="flow-arrow">→</span>
           <span class="flow-item">🎤 Speaker Profiles</span>
           <span class="flow-arrow">→</span>

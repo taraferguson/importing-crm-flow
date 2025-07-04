@@ -580,7 +580,7 @@ export class UploadStepComponent {
     const typeNames: { [key: string]: string } = {
       'events': 'Past Events',
       'speakers': 'Speaker Profiles', 
-      'sessions': 'Speaking Sessions',
+      'sessions': 'Sessions and Webinars',
       'users': 'Team Members'
     };
     return typeNames[typeId] || typeId;

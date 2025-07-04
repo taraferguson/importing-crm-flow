@@ -46,7 +46,7 @@ import { GoogleContactsMockService, GoogleContact } from '../../../services/goog
               <div class="summary-icon">💼</div>
               <div class="summary-content">
                 <div class="summary-count">{{ getSummaryCount('sessions') }}</div>
-                <div class="summary-label">Speaking Sessions</div>
+                <div class="summary-label">Sessions and Webinars</div>
               </div>
             </div>
             

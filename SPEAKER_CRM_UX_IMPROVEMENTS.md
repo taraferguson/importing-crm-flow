@@ -24,7 +24,7 @@ Successfully transformed generic CRM import flow into a compelling Speaker CRM o
 **✅ Updated Import Types:**
 - **Past Events** - Import historical events to build your speaker timeline
 - **Speaker Profiles** - Build comprehensive profiles from past speaking engagements  
-- **Speaking Sessions** - Track every session to understand speaker performance and topics
+- **Sessions and Webinars** - Track every session to understand speaker performance and topics
 - **Team Members** - CRM users who manage speaker relationships and events
 
 **✅ Data Flow Visualization:**

@@ -19,7 +19,7 @@ Enhanced the optimization step to provide multiple field creation examples, load
 
 ### **2. Multiple New Field Suggestions**
 **➕ Four Different Field Types:**
-1. **"Key Takeaway"** - Capture main insights from speaking sessions
+1. **"Key Takeaway"** - Capture main insights from sessions and webinars
 2. **"Speaker Rating"** - Audience feedback ratings (1-5 scale)
 3. **"Travel Required"** - Speaker accommodation needs
 4. **"Session Type"** - Event session categorization
