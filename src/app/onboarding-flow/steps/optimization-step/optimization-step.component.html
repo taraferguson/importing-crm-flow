@@ -1,0 +1,137 @@
+<div class="optimization-container animation-slide-up">
+  <div class="step-header">
+    <h2>Field Mapping & Optimizations</h2>
+    <p>Map your file columns to our system fields and review optimizations</p>
+  </div>
+
+  <!-- File Field Mappings -->
+  <form>
+    <div class="file-mappings" *ngIf="files.length > 0">
+      <div *ngFor="let file of files; let i = index" class="file-mapping-section" [formGroup]="getFormGroup(i)">
+        <div class="file-header">
+          <div class="file-info">
+            <div class="file-icon">📄</div>
+            <div class="file-details">
+              <h3>{{ file.name }}</h3>
+              <span class="record-type">{{ file.type }}</span>
+            </div>
+          </div>
+          <div class="mapping-status">
+            <span class="status-badge" [class.complete]="isFileMappingComplete(file.name)">
+              {{ isFileMappingComplete(file.name) ? '✓ Complete' : '⚠ Incomplete' }}
+            </span>
+          </div>
+        </div>
+
+        <div class="field-mappings-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Source Field (Your File)</th>
+                <th>Map To (Our System)</th>
+                <th>Confidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let col of file.columns; let colIndex = index; trackBy: trackByColumn">
+                <td class="source-field">
+                  <div class="field-name">{{ col }}</div>
+                </td>
+                <td class="target-field">
+                  <select
+                    class="field-dropdown"
+                    [formControl]="getFormControl(i, col)"
+                    [name]="file.name + '-' + col"
+                    (change)="onDropdownChange(i, col)"
+                  >
+                    <option value="">-- Select Field --</option>
+                    <option *ngFor="let opt of file.systemFields" [value]="opt">{{ opt }}</option>
+                  </select>
+                </td>
+                <td class="confidence">
+                  <div class="confidence-indicator" *ngIf="getFormControl(i, col).value">
+                    <div class="confidence-bar">
+                      <div 
+                        class="confidence-fill" 
+                        [style.width.%]="getConfidenceForMapping(col, getFormControl(i, col).value, file.systemFields) * 100">
+                      </div>
+                    </div>
+                    <span class="confidence-text">
+                      {{ (getConfidenceForMapping(col, getFormControl(i, col).value, file.systemFields) * 100).toFixed(0) }}%
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Global Optimizations -->
+  <div class="global-optimizations" *ngIf="globalOptimizations.length > 0">
+    <h3>Additional Optimizations</h3>
+    <div 
+      *ngFor="let optimization of globalOptimizations; let i = index" 
+      class="optimization-item">
+      
+      <div class="optimization-header">
+        <div class="optimization-icon">
+          <span *ngIf="optimization.type === 'duplicate_emails'">📧</span>
+          <span *ngIf="optimization.type === 'new_field'">➕</span>
+        </div>
+        <div class="optimization-info">
+          <h4>{{ optimization.title }}</h4>
+          <p>{{ optimization.description }}</p>
+        </div>
+      </div>
+
+      <div class="optimization-content" *ngIf="optimization.type === 'duplicate_emails'">
+        <div class="duplicate-options">
+          <label 
+            *ngFor="let option of optimization.options" 
+            class="radio-option">
+            <input 
+              type="radio" 
+              [name]="'duplicate_' + i"
+              [value]="option"
+              [(ngModel)]="optimization.selectedOption">
+            <span class="radio-custom"></span>
+            <span class="radio-label">{{ option }}</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="optimization-content" *ngIf="optimization.type === 'new_field'">
+        <div class="new-field">
+          <p>Create new field: <strong>{{ optimization.suggestedValue }}</strong></p>
+          <div class="action-buttons">
+            <button 
+              class="btn btn-primary btn-sm" 
+              (click)="approveOptimization(i, 'create_field')">
+              Create Field
+            </button>
+            <button 
+              class="btn btn-secondary btn-sm" 
+              (click)="approveOptimization(i, 'skip_field')">
+              Skip for Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <button 
+      class="btn btn-primary btn-large cta-btn" 
+      [disabled]="!allMappingsComplete"
+      (click)="onContinue()">
+      Continue with Optimizations
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div> 

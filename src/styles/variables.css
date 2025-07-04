@@ -1,0 +1,137 @@
+/* SessionBoard Design System Variables */
+
+/* Primary Colors */
+:root {
+  --primary---blue--01: #E2EEF8;
+  --primary---blue--02: #2E70E2;
+  --primary---blue--03: #1E62D8;
+  --primary---orange--01: #FF922B;
+  --primary---orange--02: #FD7E14;
+  
+  /* Session Status Colors */
+  --session--status---accepted: #51CF66;
+  --session--status---pending: #FFE066;
+  --session--status---decline--queue: #FCC419;
+  --session--status---accept--queue: #8CE99A;
+  --session--status---declined: #FF6B6B;
+  
+  /* Background Colors */
+  --background---b-g-01: #FFFFFF;
+  --background---b-g-02: #F8F8F8;
+  --background---b-g-03: #F2F1F4;
+  --background---b-g-04: #DEDEDE;
+  --background---b-g--tag: #EBEBEB;
+  --background---b-g--sidebar: #F7F7F8;
+  --background---sidebar--hover: #E4E4E7;
+  --background---b-g-002: #FBFBFB;
+  
+  /* Text Colors */
+  --text---header: #343434;
+  --text---body-text: #494949;
+  --text---help-text: #868686;
+  --text---placeholder-text: #494949;
+  --text---sidebar-text: #777777;
+  
+  /* Success Colors */
+  --success--success0: #EBFBEE;
+  --success--success1: #D3F9D8;
+  --success--success2: #B2F2BB;
+  --success--success3: #8CE99A;
+  --success--success4: #69DB7C;
+  --success--success5: #51CF66;
+  --success--success6: #40C057;
+  --success--success7: #37B24D;
+  --success--success8: #2F9E44;
+  --success--success9: #2B8A3E;
+  
+  /* Danger Colors */
+  --danger--danger0: #FFF5F5;
+  --danger--danger1: #FFE3E3;
+  --danger--danger2: #FFC9C9;
+  --danger--danger3: #FFA8A8;
+  --danger--danger4: #FF8787;
+  --danger--danger5: #FF6B6B;
+  --danger--danger6: #FA5252;
+  --danger--danger7: #F03E3E;
+  --danger--danger8: #E03131;
+  --danger--danger9: #C92A2A;
+  
+  /* Warning Colors */
+  --warning--warning0: #FFF9DB;
+  --warning--warning1: #FFF3BF;
+  --warning--warning2: #FFEC99;
+  --warning--warning3: #FFE066;
+  --warning--warning4: #FFD43B;
+  --warning--warning5: #FCC419;
+  --warning--warning6: #FAB005;
+  --warning--warning7: #F59F00;
+  --warning--warning8: #F08C00;
+  --warning--warning9: #E67700;
+  
+  /* Info Colors */
+  --info--info0: #E8F7FF;
+  --info--info1: #CCEDFF;
+  --info--info2: #A3DAFF;
+  --info--info3: #72C3FC;
+  --info--info4: #4DADF7;
+  --info--info5: #329AF0;
+  --info--info6: #228AE6;
+  --info--info7: #1C7CD6;
+  --info--info8: #1B6EC2;
+  --info--info9: #1862AB;
+  
+  /* Tag Colors */
+  --tag--color---relevance: #2F54EB;
+  --tag--color---company: #13C2C2;
+  --tag--color---sessions: #CC782F;
+  --tag--color---custom: #722ED1;
+  --tag--color---history: #006FD6;
+  
+  /* Spacing Scale */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+  --spacing-xxxl: 48px;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  --border-radius-xxl: 16px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.2);
+  --shadow-focus: 0 0 0 3px rgba(46, 112, 226, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+  
+  /* Font Weights - Optimized for Accessibility */
+  --font-weight-light: 400;        /* Light - reserved for help text only */
+  --font-weight-regular: 500;      /* Regular - default body text for readability */
+  --font-weight-medium: 500;       /* Medium - same as regular for consistency */
+  --font-weight-semibold: 600;     /* Semibold - headings and emphasis */
+  --font-weight-bold: 700;         /* Bold - high emphasis elements */
+  
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-md: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-xxl: 1.5rem;    /* 24px */
+  --font-size-xxxl: 2rem;     /* 32px */
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+} 
